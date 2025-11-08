@@ -18,11 +18,6 @@ jobs:
         run: |
           dotnet restore dotnet-app/ProjectFile.csproj
           dotnet restore dotnet-app.Tests/ProjectFile-Tests.csproj
-
-      - name: Build solution
-        run: |
-          dotnet build dotnet-app/ProjectFile.csproj --no-restore
-          dotnet build dotnet-app.Tests/ProjectFile-Tests.csproj --no-restore
       
       - name: Run .NET tests
         run: |
