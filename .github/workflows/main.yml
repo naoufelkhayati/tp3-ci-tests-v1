@@ -17,7 +17,7 @@ jobs:
       - name: Restore dependencies
         run: |
           dotnet restore dotnet-app/ProjectFile.csproj
-          dotnet restore dotnet-app.Tests/ProjectFile.csproj
+          dotnet restore dotnet-app.Tests/ProjectFile-Tests.csproj
 
       - name: Build solution
         run: dotnet build --no-restore
