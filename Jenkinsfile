@@ -18,7 +18,7 @@ pipeline {
         stage('Run Python tests') {
             steps {
                 dir('python-app') {
-                    bat 'python3 -m unittest'
+                    bat 'python -m unittest'
                 }
             }
         }
