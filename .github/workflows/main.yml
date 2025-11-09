@@ -20,7 +20,7 @@ jobs:
           dotnet restore dotnet-app.Tests/ProjectFile-Tests.csproj
       
       - name: Run .NET tests
-        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed"
+        run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed" --logger "trx;LogFileName=TestResults.trx"
 
   test-python:
     runs-on: ubuntu-latest
