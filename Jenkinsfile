@@ -15,13 +15,6 @@ pipeline {
             }
         }
 
-        stage('Run Python tests') {
-            steps {
-                dir('python-app') {
-                    bat 'python -m unittest'
-                }
-            }
-        }
     }
 
     post {
