@@ -36,7 +36,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install dependencies and run tests
+      - name: Run Python tests and generate XML report
         run: |
           cd python-app
-          python -m unittest
+          pip install unittest-xml-reporting
+          python test_math_utils.py
+      - name: Upload Python Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-test-report
+          path: python-app/test-reports
