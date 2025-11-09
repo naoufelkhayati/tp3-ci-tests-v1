@@ -21,6 +21,12 @@ jobs:
       
       - name: Run .NET tests
         run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed" --logger "trx;LogFileName=TestResults.trx"
+     
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: dotnet-test-report
+          path: dotnet-app.Tests/TestResults/TestResults.trx
 
   test-python:
     runs-on: ubuntu-latest
