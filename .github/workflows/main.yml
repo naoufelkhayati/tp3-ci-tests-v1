@@ -22,7 +22,7 @@ jobs:
       - name: Run .NET tests
         run: dotnet test dotnet-app.Tests/ProjectFile-Tests.csproj --logger "console;verbosity=detailed"
 
-test-python:
+  test-python:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
