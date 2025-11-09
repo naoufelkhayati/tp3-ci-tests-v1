@@ -10,7 +10,7 @@ pipeline {
         stage('Run .NET tests') {
             steps {
                 dir('dotnet-app') {
-                    sh 'dotnet test'
+                    bat 'dotnet test'
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
         stage('Run Python tests') {
             steps {
                 dir('python-app') {
-                    sh 'python3 -m unittest'
+                    bat 'python3 -m unittest'
                 }
             }
         }
